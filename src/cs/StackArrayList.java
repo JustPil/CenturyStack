@@ -68,12 +68,12 @@ public class StackArrayList<T> implements CenturyStackInterface<T>
      */
     public String toString()
     {
-        String str = "[ ";
+        StringBuilder str = new StringBuilder("[ ");
         for(int i = 0; i < arr.size(); i++)
         {
-            str += arr.get(i) + " ";
+            str.append(arr.get(i)).append(" ");
         }
-        return str + "]";
+        return str.toString().concat("]");
     }
 
     /**
