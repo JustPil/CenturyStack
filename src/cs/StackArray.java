@@ -93,12 +93,12 @@ public class StackArray<T> implements CenturyStackInterface<T>
      */
     public String toString()
     {
-        String str = "[ ";
+        StringBuilder str = new StringBuilder("[ ");
         for(int i = 0; i < topIndex; i++)
         {
-            str += arr[i] + " ";
+            str.append(arr[i]).append(" ");
         }
-        return str + "]";
+        return str.toString().concat("]");
     }
 
     /**
@@ -107,12 +107,12 @@ public class StackArray<T> implements CenturyStackInterface<T>
      */
     public String editContents()
     {
-        String str = "";
+        StringBuilder str = new StringBuilder();
         for(int i = 0; i < topIndex; i++)
         {
-            str += arr[i];
+            str.append(arr[i]);
         }
-        return str;
+        return str.toString();
     }
 
     /**
