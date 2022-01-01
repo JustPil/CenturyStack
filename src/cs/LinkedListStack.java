@@ -90,14 +90,14 @@ public class LinkedListStack<T> implements CenturyStackInterface<T>
      */
     public String toString()
     {
-        String str = "[ ";
+        StringBuilder str = new StringBuilder("[ ");
         Node<T> parser = stackTop;
         while(parser != null)
         {
-            str += parser.getData() + " ";
+            str.append(parser.getData()).append(" ");
             parser = parser.getNext();
         }
-        return str + "]";
+        return str.toString().concat("]");
     }
 
     /**
