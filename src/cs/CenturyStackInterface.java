@@ -1,7 +1,6 @@
 package cs;
 
-public interface CenturyStackInterface<T>
-{
+public interface CenturyStackInterface<T> {
     int SIZE = 100;
     boolean isEmpty();
     boolean isFull();
