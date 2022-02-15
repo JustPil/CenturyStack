@@ -2,16 +2,14 @@ package cs;
 
 import java.util.ArrayList;
 
-public class StackArrayList<T> implements CenturyStackInterface<T>
-{
+public class StackArrayList<T> implements CenturyStackInterface<T> {
     private ArrayList<T> arr = new ArrayList<>();
 
     /**
      * isEmpty Tests if the ArrayList is empty.
      * @return True if the ArrayList is empty, false otherwise.
      */
-    public boolean isEmpty()
-    {
+    public boolean isEmpty() {
         return arr.isEmpty();
     }
 
@@ -19,18 +17,15 @@ public class StackArrayList<T> implements CenturyStackInterface<T>
      * isFull Relays that the ArrayList is not full.
      * @return False, an ArrayList has no maximum upper bound.
      */
-    public boolean isFull()
-    {
+    public boolean isFull() {
         return false;
     }
 
     /**
      * pop Removes the most recent addition to the ArrayList.
      */
-    public void pop()
-    {
-        if(isEmpty())
-        {
+    public void pop() {
+        if(isEmpty()) {
             throw new EmptyStackPop("Pop attempted on an empty stack.");
         }
         arr.remove(arr.size() - 1);
@@ -40,8 +35,7 @@ public class StackArrayList<T> implements CenturyStackInterface<T>
      * push Adds a new value to the end of the ArrayList.
      * @param t The value to add in the ArrayList.
      */
-    public void push(T t)
-    {
+    public void push(T t) {
         arr.add(t);
     }
 
@@ -49,16 +43,14 @@ public class StackArrayList<T> implements CenturyStackInterface<T>
      * peek Returns the most recent addition to the ArrayList.
      * @return The value of the most recent addition to the ArrayList.
      */
-    public T peek()
-    {
+    public T peek() {
         return isEmpty() ? null : arr.get(arr.size() - 1);
     }
 
     /**
      * clear Removes all additions to the ArrayList.
      */
-    public void clear()
-    {
+    public void clear() {
         arr.clear();
     }
 
@@ -66,12 +58,10 @@ public class StackArrayList<T> implements CenturyStackInterface<T>
      * toString Concatenates the ArrayList values to a String.
      * @return The ArrayList values concatenated as a String.
      */
-    public String toString()
-    {
+    public String toString() {
         StringBuilder str = new StringBuilder("[ ");
-        for(int i = 0; i < arr.size(); i++)
-        {
-            str.append(arr.get(i)).append(" ");
+        for (T t : arr) {
+            str.append(t).append(" ");
         }
         return str.toString().concat("]");
     }
@@ -79,14 +69,10 @@ public class StackArrayList<T> implements CenturyStackInterface<T>
     /**
      * swapStart Swaps the first and second elements that were added to the stack.
      */
-    public void swapStart()
-    {
-        if(arr.isEmpty() || arr.get(1) == null)
-        {
+    public void swapStart() {
+        if(arr.isEmpty() || arr.get(1) == null) {
             return;
-        }
-        else
-        {
+        } else {
             T temp = arr.get(0);
             arr.set(0, arr.get(1));
             arr.set(1, temp);
@@ -97,8 +83,7 @@ public class StackArrayList<T> implements CenturyStackInterface<T>
      * editContents Returns the contents of the stack to be used with the stack editing program.
      * @return The contents of the stack.
      */
-    public String editContents()
-    {
+    public String editContents() {
         return null;
     }
 }
