@@ -1,12 +1,10 @@
 package cs;
 
-public class EmptyStackPop extends RuntimeException
-{
+public class EmptyStackPop extends RuntimeException {
     /**
      * This constructor uses no error message.
      */
-    public EmptyStackPop()
-    {
+    public EmptyStackPop() {
         super();
     }
 
@@ -14,8 +12,7 @@ public class EmptyStackPop extends RuntimeException
      * This constructor specifies an error message.
      * @param message The error message.
      */
-    public EmptyStackPop(String message)
-    {
+    public EmptyStackPop(String message) {
         super(message);
     }
 }
