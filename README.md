@@ -1,14 +1,12 @@
 # CenturyStack
 Summary
 
-Three variations of a Stack ADT created from an interface, accompanied by a modification activity.
+Three variations of a Stack ADT created from an interface.
 
 Design
 
-Implementations include Array-based Stack, ArrayList-based Stack, Linked List-based Stack. Supports classic Stack methods such as push, pop, peek. In the main method, the user is prompted to enter a message wherein the characters of that message are pushed to the Stack. A modification menu allows the user to change the message using the Stack object, with the following supported changes:
+Implementations include Array-based Stack, ArrayList-based Stack, Linked List-based Stack. Supports methods for push, pop, peek, output of all elements in String format, swapping the first two elements, clear all elements.
 
-1) make all letters uppercase
-2) make all letters lowercase
-3) reverse the message
-4) replace all occurrences of a character to another character
-5) undo the most recent change
+The Century Stack can support up to 100 elements, after which any pushed elements will replace the top element.
+
+JUNIT tests included.
